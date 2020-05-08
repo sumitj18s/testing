@@ -1,7 +1,5 @@
-import React, { useState, useEffect } from "react";
-import { useDispatch, useSelector, shallowEqual } from "react-redux";
-import styled from "styled-components";
-import { useHistory } from "react-router-dom";
+import React, { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { fetchVoteAPI } from "../../redux/placeholder";
 import Layout from "../../Components/Layout";
 import RadioButton from "../../Components/RadioButton";
@@ -11,16 +9,8 @@ function QuestionDetailsList() {
   const [optionValue, setOptionValue] = useState();
   const dispach = useDispatch();
   const [message, setMessage] = useState("");
-  // const questionDetail = {
-  //   choices: [
-  //     { choice: "A", url: "1" },
-  //     { choice: "B", url: "2" },
-  //     { choice: "C", url: "3" },
-  //     { choice: "D", url: "4" },
-  //   ],
-  // };
+
   const handleOptionChange = (e) => {
-    console.log(e.currentTarget.value);
     setOptionValue(e.currentTarget.value);
   };
 
@@ -42,6 +32,7 @@ function QuestionDetailsList() {
                   url={qd.url}
                   handleOptionChange={handleOptionChange}
                   checked={qd.url === optionValue}
+                  key={qd.url}
                 />
               );
             })}

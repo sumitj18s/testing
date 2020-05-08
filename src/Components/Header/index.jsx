@@ -21,7 +21,7 @@ function Header() {
     <Wrapper>
       <LogoWrapper src={logo} alt="hey car" />
       <h3>Voice your opinion</h3>
-      )}
+      )
     </Wrapper>
   );
 }
