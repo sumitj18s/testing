@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector, shallowEqual } from "react-redux";
 import styled from "styled-components";
-
+import { useHistory } from "react-router-dom";
 import { fetchAPI, fetchSecondAPI } from "../../redux/placeholder";
-import Header from "../../Components/Header";
 import Layout from "../../Components/Layout";
 
 const Question = styled.div`
@@ -19,15 +18,13 @@ const Question = styled.div`
 `;
 
 function QuestionBox(props) {
-  return (
-    <Question
-      onClick={() => {
-        console.log("aaa--bbb");
-      }}
-    >
-      {props.children}
-    </Question>
-  );
+  const history = useHistory();
+
+  function handleClick() {
+    history.push("/detail");
+  }
+
+  return <Question onClick={handleClick}>{props.children}</Question>;
 }
 
 function QuestionsList() {
@@ -39,15 +36,12 @@ function QuestionsList() {
   }, []);
 
   return (
-    <>
-      <Header />
-      <Layout>
-        {questionsList.length > 0 &&
-          questionsList.map((q) => {
-            return <QuestionBox>{q.question}</QuestionBox>;
-          })}
-      </Layout>
-    </>
+    <Layout>
+      {questionsList.length > 0 &&
+        questionsList.map((q) => {
+          return <QuestionBox>{q.question}</QuestionBox>;
+        })}
+    </Layout>
   );
 }
 

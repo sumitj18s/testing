@@ -1,7 +1,5 @@
-import Routing from './routes'
+import Routing from "./routes";
 
+const App = () => Routing();
 
-
-const App = ()=>Routing()
-console.log({E:Routing(), F:()=>Routing()});
-export default App
+export default App;

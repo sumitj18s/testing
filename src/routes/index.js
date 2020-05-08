@@ -1,12 +1,11 @@
 import React from "react";
 import { Route, Switch } from "react-router-dom";
-import Login from "../features/Login";
-
 import QuestionsList from "../features/QuestionsList";
+import QuestionDetail from "../features/QuestionDetail";
 
 const Routing = () => (
   <Switch>
-    <Route exact path="/login" component={Login} />
+    <Route exact path="/detail" component={QuestionDetail} />
     <Route path="/" component={QuestionsList} />
   </Switch>
 );
