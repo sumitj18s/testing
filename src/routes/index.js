@@ -1,14 +1,14 @@
-import React from 'react';
-import { Route, Switch } from 'react-router-dom'
-import Login from '../features/Login'
-import Dashboard from '../features/Dashboard'
+import React from "react";
+import { Route, Switch } from "react-router-dom";
+import Login from "../features/Login";
+
+import QuestionsList from "../features/QuestionsList";
 
 const Routing = () => (
   <Switch>
-    <Route exact path='/login' component={Login} />
-    <Route exact path='/dashboard' component={Dashboard} />
-    <Route path='/' component={Login} />
+    <Route exact path="/login" component={Login} />
+    <Route path="/" component={QuestionsList} />
   </Switch>
-)
+);
 
-export default Routing
+export default Routing;
