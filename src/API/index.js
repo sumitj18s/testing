@@ -1,6 +1,6 @@
 async function getData(url) {
   const result = await fetch(url)
-    .then((response) => (response.json()))
+    .then((response) => response.json())
     .then((myJson) => {
       return myJson;
     });
@@ -8,4 +8,16 @@ async function getData(url) {
   return result;
 }
 
-export default getData;
+async function postData(url) {
+  const result = await fetch(url, {
+    method: "POST",
+  })
+    .then((response) => response.json())
+    .then((myJson) => {
+      return myJson;
+    });
+
+  return result;
+}
+
+export { getData, postData };
