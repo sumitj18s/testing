@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useDispatch, useSelector, shallowEqual } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import styled from "styled-components";
 import { useHistory } from "react-router-dom";
 import { fetchAPI, fetchSecondAPI } from "../../redux/placeholder";
@@ -19,12 +19,16 @@ const Question = styled.div`
 
 function QuestionBox(props) {
   const history = useHistory();
+  const dispatch = useDispatch();
 
-  function handleClick() {
+  function handleClick(url) {
     history.push("/detail");
+    dispatch(fetchSecondAPI(url));
   }
 
-  return <Question onClick={handleClick}>{props.children}</Question>;
+  return (
+    <Question onClick={() => handleClick(props.url)}>{props.children}</Question>
+  );
 }
 
 function QuestionsList() {
@@ -39,7 +43,7 @@ function QuestionsList() {
     <Layout>
       {questionsList.length > 0 &&
         questionsList.map((q) => {
-          return <QuestionBox>{q.question}</QuestionBox>;
+          return <QuestionBox url={q.url}>{q.question}</QuestionBox>;
         })}
     </Layout>
   );
