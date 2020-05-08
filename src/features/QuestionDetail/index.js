@@ -42,7 +42,7 @@ function QuestionDetailsList() {
       {message && (
         <>
           <label>{message}</label>
-          <a href="/">Home</a>
+          <a href="/">Goto Home</a>
         </>
       )}
     </Layout>
