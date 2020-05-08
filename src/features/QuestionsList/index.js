@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import styled from "styled-components";
 import { useHistory } from "react-router-dom";
@@ -43,7 +43,11 @@ function QuestionsList() {
     <Layout>
       {questionsList.length > 0 &&
         questionsList.map((q) => {
-          return <QuestionBox url={q.url}>{q.question}</QuestionBox>;
+          return (
+            <QuestionBox key={q.url} url={q.url}>
+              {q.question}
+            </QuestionBox>
+          );
         })}
     </Layout>
   );
