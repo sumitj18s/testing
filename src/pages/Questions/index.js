@@ -5,6 +5,7 @@ import { useHistory } from "react-router-dom";
 import { loadQuestions } from "../../redux/questions";
 import { loadQuestionDetails } from "../../redux/question-details";
 import Layout from "../../components/Layout";
+import theme from "../../theme";
 
 const Question = styled.div`
   font-size: 1.5rem;
@@ -13,9 +14,13 @@ const Question = styled.div`
   font-weight: bold;
   width: 50%;
   padding: 1.5rem;
-  border: 1px green solid;
+  border: 1px ${theme.color.primary} solid;
   margin: 2rem;
   cursor: pointer;
+  border-radius: 1rem;
+  &:hover {
+    background: ${theme.color.gray3};
+  }
 `;
 
 function QuestionBox(props) {

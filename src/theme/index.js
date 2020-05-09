@@ -1,5 +1,5 @@
 const color = {
-  primary: "#00CFA8",
+  primary: "#00CEA5",
   secondary: "#317BD1",
   success: "#1A9B8C",
   danger: "#DB4A2A",
@@ -39,7 +39,7 @@ const fontSize = {
   h1: "4rem",
   h2: "3.4rem",
   h3: "2.2rem",
-  h4: "1.8rem",
+  h4: "1.4rem",
 };
 const shadow = {
   default: "0 0 0.6rem rgba(0, 0, 0, 0.1)",

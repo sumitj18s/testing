@@ -14,13 +14,13 @@ const Wrapper = styled.div`
 
 const LogoWrapper = styled.div`
   display: flex;
-  width: 45%;
+  width: 40%;
 `;
 const Logo = styled.img`
   height: 10rem;
 `;
 
-const Title = styled.h3`
+const Title = styled.h2`
   margin-right: auto;
 `;
 

@@ -27,7 +27,9 @@ const GlobalStyle = createGlobalStyle`
   h3 {
     font-size: ${theme.fontSize.h3};
   }
- 
+  h4 {
+    font-size: ${theme.fontSize.h4};
+  }
 
 `;
 
