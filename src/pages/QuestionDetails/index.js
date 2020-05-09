@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
+import styled from "styled-components";
 import { updateVote } from "../../redux/question-details";
 import Layout from "../../components/Layout";
 import RadioButton from "../../components/RadioButton";
-import styled from "styled-components";
 import Button from "../../components/Button";
 
 function QuestionDetailsList() {

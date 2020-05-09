@@ -15,6 +15,7 @@ const GlobalStyle = createGlobalStyle`
     font-size: ${theme.fontSize.body};
     line-height: ${theme.base.lineHeight};
     font-family: ${theme.base.fontFamily};
+    color: ${theme.base.color};
   }
 
   h1 {
