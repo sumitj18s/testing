@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { updateVote } from "../../redux/question-details";
-import Layout from "../../Components/Layout";
-import RadioButton from "../../Components/RadioButton";
+import Layout from "../../components/Layout";
+import RadioButton from "../../components/RadioButton";
 
 function QuestionDetailsList() {
   const questionDetail = useSelector((state) => state.questionDetails.response);

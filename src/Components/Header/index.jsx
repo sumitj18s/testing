@@ -12,16 +12,25 @@ const Wrapper = styled.div`
   background: ${theme.color.primary};
 `;
 
-const LogoWrapper = styled.img`
+const LogoWrapper = styled.div`
+  display: flex;
+  width: 45%;
+`;
+const Logo = styled.img`
   height: 10rem;
+`;
+
+const Title = styled.h3`
+  margin-right: auto;
 `;
 
 function Header() {
   return (
     <Wrapper>
-      <LogoWrapper src={logo} alt="hey car" />
-      <h3>Voice your opinion</h3>
-      )
+      <LogoWrapper>
+        <Logo src={logo} alt="hey car" />
+      </LogoWrapper>
+      <Title>Vote your opinion</Title>
     </Wrapper>
   );
 }

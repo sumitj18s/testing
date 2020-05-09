@@ -1,6 +1,6 @@
 import { takeLatest, call, put } from "redux-saga/effects";
 import createAsyncActionType from "../utils/reduxUtils";
-import { getData } from "../../API";
+import { getData } from "../../services";
 
 // Initialize State
 const initialState = Object.freeze({

@@ -4,7 +4,7 @@ import styled from "styled-components";
 import { useHistory } from "react-router-dom";
 import { loadQuestions } from "../../redux/questions";
 import { loadQuestionDetails } from "../../redux/question-details";
-import Layout from "../../Components/Layout";
+import Layout from "../../components/Layout";
 
 const Question = styled.div`
   font-size: 1.5rem;
@@ -38,7 +38,7 @@ function QuestionsList() {
 
   useEffect(() => {
     dispatch(loadQuestions());
-  }, [loadQuestions]);
+  }, [dispatch]);
 
   return (
     <Layout>
