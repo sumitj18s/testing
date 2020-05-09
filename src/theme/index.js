@@ -17,6 +17,7 @@ const base = {
   lineHeight: "1.4",
   fontSize: "62.5%",
   backgroundColor: color.white,
+  fontFamily: "Arial, Helvetica, sans-serif;",
 };
 
 const fontWeight = {

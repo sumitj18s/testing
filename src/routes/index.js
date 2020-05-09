@@ -1,7 +1,7 @@
 import React from "react";
 import { Route, Switch } from "react-router-dom";
-import QuestionsList from "../features/QuestionsList";
-import QuestionDetail from "../features/QuestionDetail";
+import QuestionsList from "../pages/Questions";
+import QuestionDetail from "../pages/QuestionDetails";
 
 const Routing = () => (
   <Switch>

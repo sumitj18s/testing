@@ -2,7 +2,8 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import styled from "styled-components";
 import { useHistory } from "react-router-dom";
-import { fetchAPI, fetchSecondAPI } from "../../redux/placeholder";
+import { loadQuestions } from "../../redux/questions";
+import { loadQuestionDetails } from "../../redux/question-details";
 import Layout from "../../Components/Layout";
 
 const Question = styled.div`
@@ -23,7 +24,7 @@ function QuestionBox(props) {
 
   function handleClick(url) {
     history.push("/detail");
-    dispatch(fetchSecondAPI(url));
+    dispatch(loadQuestionDetails(url));
   }
 
   return (
@@ -33,15 +34,15 @@ function QuestionBox(props) {
 
 function QuestionsList() {
   const dispatch = useDispatch();
-  const questionsList = useSelector((state) => state.data);
+  const questionsList = useSelector((state) => state.questions.response);
 
   useEffect(() => {
-    dispatch(fetchAPI());
-  }, []);
+    dispatch(loadQuestions());
+  }, [loadQuestions]);
 
   return (
     <Layout>
-      {questionsList.length > 0 &&
+      {questionsList &&
         questionsList.map((q) => {
           return (
             <QuestionBox key={q.url} url={q.url}>

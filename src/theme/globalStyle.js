@@ -8,15 +8,13 @@ const GlobalStyle = createGlobalStyle`
   html {
     box-sizing: border-box;
     font-size: ${theme.base.fontSize};
-    height: 100%;
   }
 
   body {    
     background-color: ${theme.base.backgroundColor};
     font-size: ${theme.fontSize.body};
-    height: 100%;
     line-height: ${theme.base.lineHeight};
-    
+    font-family: ${theme.base.fontFamily};
   }
 
   h1 {
