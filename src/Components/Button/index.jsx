@@ -15,18 +15,16 @@ const ButtonWrapper = styled.button`
 }
 `;
 
-function Button({ type, children, onClick }) {
+function Button({ children, onClick }) {
   return <ButtonWrapper onClick={onClick}>{children}</ButtonWrapper>;
 }
 
 Button.propTypes = {
-  type: PropTypes.string,
   children: PropTypes.node.isRequired,
   onClick: PropTypes.func,
 };
 
 Button.defaultProps = {
-  type: "",
   onClick: () => {},
 };
 

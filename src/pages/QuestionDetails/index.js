@@ -32,7 +32,6 @@ function QuestionDetailsList() {
     & > label {
       padding: 1rem 0;
     }
-
     & > button {
       margin: 2rem 0 4rem 0;
     }

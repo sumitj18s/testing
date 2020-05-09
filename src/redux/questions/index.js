@@ -1,6 +1,7 @@
 import { takeLatest, call, put } from "redux-saga/effects";
 import createAsyncActionType from "../utils/reduxUtils";
 import { getData } from "../../services";
+import { BASE_URL } from "../../constants";
 
 // Initialize State
 const initialState = Object.freeze({
@@ -32,7 +33,7 @@ export function questionsReducer(state = initialState, action) {
 }
 
 function* loadQuestionsSaga() {
-  const data = yield call(getData, "https://polls.apiblueprint.org/questions");
+  const data = yield call(getData, `${BASE_URL}/questions`);
   yield put({ type: LOAD_QUESTIONS.SUCCESS, data });
 }
 
